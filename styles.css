@@ -1,0 +1,421 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*** vars ***/
+:root {
+    --background-color: #6b5b95;
+    --secondary-color: #feb236;
+    --accent-color:#d64161;
+    --footer-color:#ff7b25;
+    --header-font:'Ubuntu', sans-serif;
+    --main-font: arial, helvetica, sans-serif;
+
+}
+
+/*** layout ***/
+
+html {
+    height: 100%;
+}
+
+header {
+    border-left: 4px solid var(--secondary-color);
+    border-right: 4px solid var(--secondary-color);
+    border-bottom: 4px solid var(--secondary-color);
+    border-radius: 15px;
+    background-color: var(--background-color);
+    color: white;
+    font-family: var(--header-font);
+    padding-bottom: 10px;
+    display: block;
+    position: fixed;
+    padding: .5%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    font-size: 2.0em;
+    overflow: hidden;
+    left: 9.5%;
+
+}
+
+header a {
+    text-align: center;
+    color: var(--footer-color);
+    text-decoration: none;
+    float: left;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+nav a:visited {
+    color: var(--footer-color);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family:var(--main-font);
+	line-height: 1.5;
+    font-size: 1.2em;
+    display: block;
+    float: left;
+    background-repeat: no-repeat;
+
+}
+
+
+/*** Navigation Bar 
+nav {
+    font-family: var(--footer-color);
+    float: right;
+}
+
+nav a{
+    text-decoration: none;
+    color:var(--footer-color);
+    vertical-align: text-bottom;
+    padding: 5px;
+
+}
+nav a:visited{
+    text-decoration: none;
+    color:var(--footer-color);
+}
+
+#nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+/*** Main Content ***/
+
+
+
+main {
+    margin: 0 auto;
+    margin-top:225px;
+    width: 75%;
+    overflow: auto;
+    padding: 5px;
+}
+
+h1, h2{
+    line-height: 1.2;
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+
+
+#title-of-page {
+    
+    text-align: center;
+    color: var(--accent-color);
+    padding: 15px;
+    font-size: 2.7em;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 15px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.topic-header {
+    color: var(--footer-color);
+    text-align: center;
+    padding: 15px;
+}
+
+p {
+    margin: 15px;
+    padding: 5x;
+    font-size: 1.3em;
+    color: white;
+    width: 90%;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: left;
+    border: 4px solid var(--secondary-color);
+    background-color: var(--background-color);
+    border-radius: 25px;
+}
+
+.container img {
+    max-width: 30%;
+    border: 6px solid var(--accent-color);
+    border-radius: 10px;
+    display: block;
+    margin: .5%;
+}
+
+
+footer {
+    text-align: center;
+    background-color: var(--footer-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    margin-left: 25%;
+    display: table;
+
+}
+.dos {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+/*** Flex Box ***/
+
+[class*=flex-] {
+    display: flex;
+}
+
+.flex-box {
+    margin: 2%;
+    font-size: x-large;
+}
+
+.flex-colm {
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: var(--background-color);
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.flex-colm-rev {
+    flex-direction: column-reverse;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+}
+
+.flex-row {
+    float: right;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+.flex-row-rev {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    max-width: 500px;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+}
+
+/*** Cards ***/
+.card{
+    box-sizing: border-box;
+    margin-top: 10px;
+    float: left;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.card img {
+    max-width: 50%;
+    border: 6px solid var(--accent-color);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+figcaption {
+    background-color: var(--accent-color);  
+    text-align: center;
+}
+
+/*** Responsive Video ***/
+/*** https://coolestguidesontheplanet.com/videodrome/youtube/ ***/
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/*** Responsive Design ****/
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+}
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 630px) {
+    /* For tablets: */
+    .col-m-1 {
+        width: 8.33%;
+    }
+    .col-m-2 {
+        width: 16.66%;
+    }
+    .col-m-3 {
+        width: 25%;
+    }
+    .col-m-4 {
+        width: 33.33%;
+    }
+    .col-m-5 {
+        width: 41.66%;
+    }
+    .col-m-6 {
+        width: 50%;
+    }
+    .col-m-7 {
+        width: 58.33%;
+    }
+    .col-m-8 {
+        width: 66.66%;
+    }
+    .col-m-9 {
+        width: 75%;
+    }
+    .col-m-10 {
+        width: 83.33%;
+    }
+    .col-m-11 {
+        width: 91.66%;
+    }
+    .col-m-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    #left-nav {
+        padding-left: 4%;
+    }
+    #right-nav {
+        padding-right: 4%;
+    }
+}
